@@ -1,6 +1,6 @@
 import { merge } from "lodash";
-import { RECEIVE_TODOS, RECEIVE_TODO} from "../actions/todo_action";
-import CLEAR_ALL from "../actions/todo_action";
+import { RECEIVE_TODOS, RECEIVE_TODO, CLEAR_ALL} from "../actions/todo_action";
+
 
 const initialState = {
     1: {

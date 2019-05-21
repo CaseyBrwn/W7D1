@@ -1,8 +1,17 @@
 import {connect} from 'react-redux';
-import { toDo } from './todo_list';
+import  Todo  from './todo_list';
+import { allTodos } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => {
 
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(toDo);
+const mapStateToProps = (state) => ({
+    todos: allTodos(state)
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    receiveTodo: (todo) => dispatch(receiveTodo(todo))
+});
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);
